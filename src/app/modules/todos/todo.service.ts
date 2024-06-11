@@ -16,7 +16,7 @@ export class TodoService {
 
   private todosRef = collection(this.firestore, 'todos')
 
-  todos$$: Observable<ITodo[]> = this._onChanges$$()
+  readonly todos$$: Observable<ITodo[]> = this._onChanges$$()
 
   constructor(private firestore: Firestore) {}
 
