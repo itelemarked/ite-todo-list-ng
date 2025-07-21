@@ -22,16 +22,6 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes), 
     provideIonicAngular({mode: 'ios'}), 
-    // provideFirebaseApp(() => initializeApp({
-    //   "projectId":"ite-todo-f9e2c",
-    //   "appId":"1:172881690257:web:5c060461a77c6638f58930",
-    //   "databaseURL":"https://ite-todo-f9e2c-default-rtdb.europe-west1.firebasedatabase.app",
-    //   "storageBucket":"ite-todo-f9e2c.appspot.com",
-    //   "locationId":"europe-west",
-    //   "apiKey":"AIzaSyAP7cEDguAxZlFQAh88r7R3ApNC3RXdW-Y",
-    //   "authDomain":"ite-todo-f9e2c.firebaseapp.com",
-    //   "messagingSenderId":"172881690257"
-    // })), 
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
     provideAuth(() => getAuth()), 
     provideFirestore(() => getFirestore()), 
